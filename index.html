@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Door Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="door">
+        <div class="door-panel">
+            <h2>SECURE AREA</h2>
+            <p>Access Restricted</p>
+            <div class="knob"></div>
+        </div>
+    </div>
+
+    <div class="security-panel">
+        <h1>SECURITY DOOR ACCESS</h1>
+        <p>Scan authorized QR code to enter</p>
+        
+        <div class="scanner-container">
+            <video id="preview"></video>
+        </div>
+        
+        <div id="status" class="status">Awaiting authorization...</div>
+        
+        <div class="instructions">
+            Point camera at your authorized QR code
+        </div>
+        
+        <div class="valid-codes">
+            Valid codes: "SECURE123", "ACCESS456", "DOOR789"
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/schmich/instascan-builds@master/instascan.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
