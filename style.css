@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.security-panel {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #e74c3c;
+    margin-bottom: 20px;
+}
+
+.scanner-container {
+    margin: 20px 0;
+    position: relative;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    border: 3px solid #333;
+}
+
+.status {
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.denied {
+    background-color: #e74c3c;
+    animation: pulse 0.5s;
+}
+
+.granted {
+    background-color: #2ecc71;
+    animation: pulse 0.5s;
+}
+
+.door {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+}
+
+.door.open {
+    transform: translateX(-100%);
+}
+
+.door-panel {
+    width: 80%;
+    height: 80%;
+    background-color: #111;
+    border: 15px solid #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.knob {
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.instructions {
+    margin-top: 20px;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.valid-codes {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #777;
+}
